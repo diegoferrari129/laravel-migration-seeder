@@ -4,7 +4,15 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                ciao
+
+                <ul>
+                    @foreach ($trains as $train)
+                        <li>
+                            {{ $train->Corporation }}
+                        </li>
+                    @endforeach
+                </ul>
+
             </div>
         </div>
     </div>
