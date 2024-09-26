@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 
 use Faker\Generator as Faker;
 
-use App\Model\Trains;
+use App\Models\Train;
 
 class TrainsTableSeeder extends Seeder
 {
@@ -19,7 +19,8 @@ class TrainsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         for($i=0; $i<10; $i++){
-            
+            $train = new Train();
+            $train->corporation = $faker->company();
 
             $train->save();
         }
