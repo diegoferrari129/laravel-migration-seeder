@@ -34,7 +34,15 @@ return new class extends Migration
     public function down()
     {
         Schema::table('trains', function (Blueprint $table) {
-            //
+            $table->dropColumn('company');
+            $table->dropColumn('departure_station');
+            $table->dropColumn('arrival_station');
+            $table->dropColumn('departure_time');
+            $table->dropColumn('arrival_time');
+            $table->dropColumnr('train_code');
+            $table->dropColumn('number_of_carriages');
+            $table->dropColumn('on_time');
+            $table->dropColumn('deleted');
         });
     }
 };

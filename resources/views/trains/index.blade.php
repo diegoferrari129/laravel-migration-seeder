@@ -38,11 +38,11 @@
                             </span>
                             <span>
                                 //on_time:
-                                {{ $train->on_time }}//
+                                {{ $train->on_time ? 'Yes' : 'No' }}//
                             </span>
                             <span>
                                 //deleted:
-                                {{ $train->deleted }}//
+                                {{ $train->deleted ? 'Yes' : 'No' }}//
                             </span>
                         </li>
                     @endforeach
